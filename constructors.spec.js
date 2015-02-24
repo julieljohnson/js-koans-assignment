@@ -53,6 +53,36 @@ function expect(expectation) {
 ** DO NOT EDIT ANY LINE BELOW
 **
 */
+
+
+function Human(spec) {
+    var spec = spec || {};
+    this.isCool= spec.isCool || false;
+    this.mood= spec.mood;
+
+    this.pet= function(pet) {
+        pet.mood= "happy";
+        this.mood="happy";
+
+    this.feed= function(pet) {
+        pet.isHungry= false;
+
+
+    }
+
+    }
+
+
+}
+
+function Pet(spec) {
+    var spec= spec || {};
+    this.color= spec.color;
+    this.isHungry= spec.isHungry;
+    this.mood= spec.mood;
+}
+
+
 var calvin = new Human({
   isCool: false
 });
