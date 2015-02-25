@@ -57,7 +57,8 @@ function expect(expectation) {
 
 function Human(spec) {
     var spec = spec || {};
-    this.isCool= spec.isCool || false;
+    //this.isCool= options.isCool || true;
+    this.isCool= String(spec.isCool) === "true" || (spec.isCool === undefined) ? true: false;
     this.mood= spec.mood;
 
     this.pet= function(pet) {
